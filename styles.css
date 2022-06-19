@@ -21,65 +21,25 @@
 /* Base
    ------------------------------ */
 
-   html {
-	scroll-behavior: smooth;
-   }
-
-   body {
-	font-family: 'Source Sans Pro';
-   }
-
-   h1, h2, h3, h4, h5, h6 {
-	font-family: 'Source Sans Pro';
-   }
-
-   a:hover {
-	color: #FF6565;
-   }
-
-   a:active {
-	color: #FF6565;
-   }
-
-   .button:hover {
-	opacity: 0.9;
-   }
-
 /* Layout
    ------------------------------ */
-
-   .container {
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-   }
 
 /* Header
    ------------------------------ */
 
-   .header-container {
-	display: flex;
-   }
-
 /* Navbar
    ------------------------------ */
 
-   .nav {
-	display: flex;
-   }
-
 /* 3. SECTION */
+
+/* Section (all styles)
+   ------------------------------ */
+
+/* Section Theming
+   ------------------------------ */
 
 /* Section HERO
    ------------------------------ */
-
-   .section-hero {
-	color: #ffffff;
-	width: 100%;
-	height: 800px;
-	background-image: url(../images/headphones_hero_1.jpg);
-	background-repeat: no-repeat;
-   }
 
 /* Section WHAT WE DO
    ------------------------------ */
