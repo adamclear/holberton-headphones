@@ -16,36 +16,113 @@
 /* Variables
    ------------------------------ */
 
+   :root {
+      /* FONT */
+      --font-size-xsmall: .75rem;
+      --font-size-small: .875rem;
+      --font-size-medium: 1rem;
+      --font-size-large: 1.125rem;
+      --font-size-xlarge: 2rem;
+      --font-size-xxlarge: 2.875rem;
+      --font-weight-regular: 400;
+      --font-weight-bold: 550;
+
+      /* COLOR */
+      --color-black: #090909;
+      --color-white: #FFFFFF;
+      --color-red: #FF6565;
+   }
+
 /* 2. LAYOUT */
 
 /* Base
    ------------------------------ */
 
+   html {
+      scroll-behavior: smooth;
+   }
+
+   body {
+      font-family: 'Source Sans Pro';
+   }
+
+   .title {
+      font-size: var(--font-size-xlarge);
+      font-weight: var(--font-weight-bold);
+   }
+
 /* Layout
    ------------------------------ */
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
 
 /* Header
    ------------------------------ */
 
+   .header-container {
+      display: flex;
+      justify-content: center;
+   }
+
+   .logo {
+      background-image: url(../images/logo_headphones.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 161px;
+      height: 32px;
+   }
+
 /* Navbar
    ------------------------------ */
+
+   .nav {
+      display: flex;
+   }
 
 /* 3. SECTION */
 
 /* Section (all styles)
    ------------------------------ */
 
+   .section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
 /* Section Theming
    ------------------------------ */
 
+   .section-dark {
+      color: var(--color-white);
+   }
+
 /* Section HERO
    ------------------------------ */
+
+   .section-hero {
+      background-image: url(../images/headphones_hero_1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 800px;
+   }
 
 /* Section WHAT WE DO
    ------------------------------ */
 
 /* Section RESULTS
    ------------------------------ */
+
+   .section-results {
+      background-image: url(../images/headphones_hero_2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 800px;
+   }
 
 /* Section CONTACT US
    ------------------------------ */
