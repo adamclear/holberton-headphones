@@ -25,7 +25,7 @@
       --font-size-xlarge: 2rem;
       --font-size-xxlarge: 2.875rem;
       --font-weight-regular: 400;
-      --font-weight-bold: 550;
+      --font-weight-bold: 600;
 
       /* COLOR */
       --color-black: #090909;
@@ -40,10 +40,56 @@
 
    html {
       scroll-behavior: smooth;
+      font-size: 100%;
    }
 
    body {
+      max-width: 1400px;
+      margin: 0 auto !important;
       font-family: 'Source Sans Pro';
+   }
+
+/* Layout
+   ------------------------------ */
+
+   a {
+      text-decoration: none;
+   }
+
+   a:hover {
+      color: var(--color-red);
+   }
+
+   .button {
+      width: 162px;
+      height: 44px;
+      background-color: var(--color-red);
+      color: var(--color-white);
+      border-radius: 25px;
+      margin: 2rem 0 4rem 0;
+      border: none;
+   }
+
+   .button:hover {
+      opacity: 0.9;
+   }
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+   }
+
+   p {
+      width: 650px;
+      text-align: center;
+      font-weight: var(--font-weight-regular);
+   }
+
+   .row {
+      display: flex;
    }
 
    .title {
@@ -51,21 +97,19 @@
       font-weight: var(--font-weight-bold);
    }
 
-/* Layout
-   ------------------------------ */
-
-   .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-   }
-
 /* Header
    ------------------------------ */
+
+   .header {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+   }
 
    .header-container {
       display: flex;
       justify-content: center;
+      align-items: center;
    }
 
    .logo {
@@ -74,13 +118,20 @@
       background-size: contain;
       width: 161px;
       height: 32px;
+      margin-right: 37rem;
    }
 
 /* Navbar
    ------------------------------ */
 
-   .nav {
+   .navbar-menu {
       display: flex;
+      justify-content: space-between;
+      gap: 15px;
+   }
+
+   .nav-item {
+      color: var(--color-white);
    }
 
 /* 3. SECTION */
@@ -90,8 +141,6 @@
 
    .section {
       width: 100%;
-      display: flex;
-      justify-content: center;
    }
 
 /* Section Theming
@@ -109,22 +158,83 @@
       background-position: center;
       background-repeat: no-repeat;
       height: 800px;
+      margin-top: -4rem;
+      z-index: -1;
+      width: 100%;
+   }
+
+   .section-hero .title {
+      margin-top: 23rem;
+   }
+
+   .section-hero .sub-title {
+      margin-top: .5rem;
    }
 
 /* Section WHAT WE DO
    ------------------------------ */
 
+   .icon-desc {
+      max-width: 15rem;
+      text-align: center;
+   }
+
+   .icon-title {
+      font-size: var(--font-size-large);
+      font-weight: var(--font-weight-bold);
+      text-align: center;
+   }
+
+   .section-wwd .title {
+      margin-top: 7rem;
+   }
+
+   .section-wwd .container {
+      margin: 0 auto;
+   }
+
+   .wwd-icon {
+      display: flex;
+      flex-direction: column;
+   }
+
 /* Section RESULTS
    ------------------------------ */
+
+   .pentagon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(../images/pentagon.png);
+      background-position: center;
+   }
 
    .section-results {
       background-image: url(../images/headphones_hero_2.jpg);
       background-position: center;
       background-repeat: no-repeat;
-      height: 800px;
+      height: 650px;
+   }
+
+   .section-results .title {
+      margin-top: 9rem;
    }
 
 /* Section CONTACT US
    ------------------------------ */
+
+   .section-contact .title {
+      margin-top: 7rem;
+   }
+
+/* FOOTER
+   ------------------------------ */
+
+   footer {
+      display: flex;
+      justify-content: center;
+      background-color: var(--color-black);
+      height: 200px;
+   }
 
 /* 4. CARD */
