@@ -95,6 +95,14 @@
       width: 100%;
    }
 
+   .logo {
+      background-image: url(../images/logo_headphones.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 161px;
+      height: 32px;
+   }
+
    p {
       width: 650px;
       text-align: center;
@@ -126,12 +134,7 @@
       align-items: center;
    }
 
-   .logo {
-      background-image: url(../images/logo_headphones.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 161px;
-      height: 32px;
+   header .logo {
       margin-right: 37rem;
    }
 
@@ -357,6 +360,14 @@
 /* FOOTER
    ------------------------------ */
 
+   .copyright {
+      line-height: .5rem;
+      margin-top: 3.5rem;
+      margin-bottom: -1.5rem;
+      font-size: var(--font-size-xsmall);
+      opacity: 30%;
+   }
+
    footer {
       display: flex;
       flex-direction: column;
@@ -366,18 +377,14 @@
       height: 200px;
    }
 
-   footer .copyright {
-      line-height: .5rem;
-      margin-top: 3.5rem;
-      margin-bottom: -1.5rem;
-      font-size: var(--font-size-xsmall);
-      opacity: 30%;
-   }
-
-   .footer-links {
+   .footer-container {
       display: flex;
       justify-content: center;
       align-items: center;
+   }
+
+   footer .logo {
+      margin-right: 43rem;
    }
 
    .social {
@@ -416,7 +423,7 @@
 
 /* 4. TABLET */
 
-@media only screen and (min-width:481px) and (max-width:1056px) {
+@media only screen and (min-width:657px) and (max-width:1056px) {
    
    /* Base
       --------------------------- */
@@ -427,7 +434,7 @@
    /* Header
    ------------------------------ */
 
-   .logo {
+   header .logo {
       margin-right: 10rem;
    }
 
@@ -475,11 +482,15 @@
    /* FOOTER
    ------------------------------ */
 
+   footer .logo {
+      margin-right: 16rem;
+   }
+
 }
 
 /* 5. MOBILE */
 
-@media (max-width:480px) {
+@media (max-width:656px) {
    
    /* Base
       --------------------------- */
