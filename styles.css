@@ -40,7 +40,7 @@
    ------------------------------ */
 
    body {
-      max-width: 1400px;
+      max-width: 87.5rem;
       margin: 0 auto !important;
       font-family: 'Source Sans Pro';
    }
@@ -67,12 +67,13 @@
 
    a {
       text-decoration: none;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease-in-out;
    }
 
    a:hover {
       color: var(--color-red);
-      transition: all 0.5s ease;
+      transform: scale(1.15);
+      transition: all 0.5s ease-in-out;
    }
 
    .button {
@@ -83,13 +84,14 @@
       border-radius: 1.75rem;
       margin: 2rem 0 4rem 0;
       border: none;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease-in-out;
    }
 
    .button:hover {
       opacity: 0.7;
       border-radius: .5rem;
-      transition: all 0.5s ease;
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
    }
 
    .container {
@@ -100,37 +102,74 @@
       width: 100%;
    }
 
-   input[type="checkbox"] {
-      display: none;
-      padding: 0;
-   }
-
    .logo {
       background-image: url(../images/logo_headphones.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 10rem;
       height: 2rem;
+      transition: all 0.5s ease-in-out;
    }
 
-   [class^="mobile-bar-"] {
-      visibility: hidden;
+   .logo:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
+   }
+
+   .menu-btn {
       position: absolute;
-      top: 2rem;
-      left: 2rem;
-      font-family: 'holberton_school-icon' !important;
-      font-size: var(--font-size-xlarge);
-      color: var(--color-white);
+      top: 10px;
+      left: -150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      opacity: 0;
+      transition: all .5s ease-in-out;
    }
 
-   .mobile-bar-on:before {
-      content: "\e902\e903";
-      letter-spacing: -1.375rem;
-      font-weight: 1000;
+   .menu-btn_burger {
+      content: '';
+      width: 35px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
    }
 
-   .mobile-bar-off:before {
-      content: "\e911";
+   .menu-btn_burger::before,
+   .menu-btn_burger::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+   }
+
+   .menu-btn_burger::before {
+      transform: translateY(-10px);
+   }
+
+   .menu-btn_burger::after {
+      transform: translateY(10px);
+   }
+
+   .menu-btn.open .menu-btn_burger {
+      transform: rotate(90deg) translate(-3px, -2px);
+      background: transparent;
+      box-shadow: none;
+   }
+
+   .menu-btn.open .menu-btn_burger::before {
+      transform: rotate(-45deg);
+   }
+
+   .menu-btn.open .menu-btn_burger::after {
+      transform: rotate(45deg);
    }
 
    p {
@@ -174,7 +213,7 @@
    .navbar-menu {
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 1.5rem;
    }
 
    .nav-item {
@@ -283,6 +322,12 @@
    .wwd-icon {
       display: flex;
       flex-direction: column;
+      transition: all 0.5s ease;
+   }
+
+   .wwd-icon:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease;
    }
 
    .wwd-icon-1 .icon:before {
@@ -315,6 +360,12 @@
       background-size: contain;
       width: 12rem;
       height: 12rem;
+      transition: all 0.5s ease;
+   }
+
+   .pentagon:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease;
    }
 
    .penta-column {
@@ -466,6 +517,7 @@
 
    header .logo {
       margin-right: 10rem;
+      transition: all 0.5s ease-in-out;
    }
 
    /* Navbar
@@ -528,30 +580,6 @@
    /* Layout
       --------------------------- */
 
-   [class^="mobile-bar"] {
-      width: 2rem;
-      height: 2rem;
-   }
-
-   .mobile-bar-off {
-      visibility: visible;
-   }
-
-   input[type="checkbox"]:checked ~ .mobile-bar-on {
-      visibility: visible;
-   }
-
-   input[type="checkbox"]:checked ~ .mobile-bar-off {
-      visibility: hidden;
-   }
-
-   input[type="checkbox"]:checked ~ .navbar-menu {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 5.5rem;
-   }
-
    p {
       width: 25rem;
    }
@@ -573,11 +601,60 @@
       flex-direction: column;
    }
 
+   .menu-btn {
+      visibility: visible;
+      position: absolute;
+      opacity: 1;
+      top: .625rem;
+      left: .625rem;
+   }
+
    /* Navbar
    ------------------------------ */
 
    .navbar-menu {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 4.375rem;
+      margin-top: 0rem;
+      opacity: 0;
+      visibility: hidden;
+      line-height: 0rem;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .navbar-menu .nav-results {
+      position: absolute;
+      top: 1.25rem;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .navbar-menu .nav-contact {
+      position: absolute;
+      top: 2.5rem;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .navbar-menu.show {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 1.75rem;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .navbar-menu.show .nav-results {
+      position: absolute;
+      top: 2.5rem;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .navbar-menu.show .nav-contact {
+      position: absolute;
+      top: 5rem;
+      transition: all 0.5s ease-in-out;
    }
 
    /* Section (all styles)
