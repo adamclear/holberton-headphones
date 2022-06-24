@@ -513,6 +513,10 @@
    /* Section WHAT WE DO
    ------------------------------ */
 
+   .icon-row {
+      flex-direction: column;
+   }
+
    .icon-column {
       flex-direction: column;
    }
@@ -520,10 +524,40 @@
    /* Section RESULTS
    ------------------------------ */
 
+   .penta-row {
+      flex-direction: column;
+   }
+
+   .penta-column {
+      flex-direction: column;
+   }
+
+   .section-results {
+      background-position: top;
+      height: 1490px;
+   }
+
    /* Section CONTACT US
    ------------------------------ */
 
    /* FOOTER
    ------------------------------ */
+
+   footer {
+      flex-direction: column;
+      height: 250px;
+   }
+
+   footer .logo {
+      margin: 1rem;
+   }
+
+   .footer-container {
+      flex-direction: column;
+   }
+
+   .social {
+      margin-top: 2.5rem;
+   }
 
 }
