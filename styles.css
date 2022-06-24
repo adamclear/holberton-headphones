@@ -67,10 +67,12 @@
 
    a {
       text-decoration: none;
+      transition: all 0.5s ease;
    }
 
    a:hover {
       color: var(--color-red);
+      transition: all 0.5s ease;
    }
 
    .button {
@@ -85,6 +87,7 @@
 
    .button:hover {
       opacity: 0.9;
+      transition: all 0.5s ease;
    }
 
    .container {
@@ -95,12 +98,37 @@
       width: 100%;
    }
 
+   input[type="checkbox"] {
+      display: none;
+      padding: 0;
+   }
+
    .logo {
       background-image: url(../images/logo_headphones.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 161px;
       height: 32px;
+   }
+
+   [class^="mobile-bar-"] {
+      visibility: hidden;
+      position: absolute;
+      top: 28px;
+      left: 21px;
+      font-family: 'holberton_school-icon' !important;
+      font-size: 32px;
+      color: var(--color-white);
+   }
+
+   .mobile-bar-on:before {
+      content: "\e902\e903";
+      letter-spacing: -22px;
+      font-weight: 1000;
+   }
+
+   .mobile-bar-off:before {
+      content: "\e911";
    }
 
    p {
@@ -498,11 +526,57 @@
    /* Layout
       --------------------------- */
 
+   [class^="mobile-bar"] {
+      width: 32px;
+      height: 32px;
+   }
+
+   .mobile-bar-off {
+      visibility: visible;
+   }
+
+   input[type="checkbox"]:checked ~ .mobile-bar-on {
+      visibility: visible;
+   }
+
+   input[type="checkbox"]:checked ~ .mobile-bar-off {
+      visibility: hidden;
+   }
+
+   input[type="checkbox"]:checked ~ .navbar-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 5.5rem;
+   }
+
+   p {
+      width: 400px;
+   }
+
+   .title {
+      width: 400px;
+      text-align: center;
+   }
+
    /* Header
    ------------------------------ */
 
+   header .logo {
+      margin: 0;
+   }
+
+   .header-container {
+      display: flex;
+      flex-direction: column;
+   }
+
    /* Navbar
    ------------------------------ */
+
+   .navbar-menu {
+      display: none;
+   }
 
    /* Section (all styles)
    ------------------------------ */
@@ -534,7 +608,7 @@
 
    .section-results {
       background-position: top;
-      height: 1490px;
+      height: 1600px;
    }
 
    /* Section CONTACT US
